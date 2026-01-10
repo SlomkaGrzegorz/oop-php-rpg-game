@@ -1,0 +1,8 @@
+/vendor/
+.env
+.env.*
+.idea/
+.vscode/git add
+*.log
+.DS_Store
+Thumbs.db
