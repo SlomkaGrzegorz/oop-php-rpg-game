@@ -2,19 +2,26 @@
 
 namespace Dungeon;
 
-use Combat\Enemy;
+use Character\EnemyFactory;
 
 final class Dungeon
 {
-    private int $roomNumber = 0;
+    private array $rooms = [];
 
-    public function nextRoom(): ?Room
+    public function __construct()
     {
-        if ($this->roomNumber >= 5) {
-            return null;
-        }
+        $count = rand(4, 10);
 
-        $this->roomNumber++;
-        return new Room(rand(0, 1) === 1);
+        for ($i = 1; $i <= $count; $i++) {
+            $isBoss = ($i === $count);
+            $this->rooms[] = new Room(
+                EnemyFactory::create($isBoss)
+            );
+        }
+    }
+
+    public function getRooms(): array
+    {
+        return $this->rooms;
     }
 }

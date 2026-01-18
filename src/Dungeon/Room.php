@@ -2,21 +2,13 @@
 
 namespace Dungeon;
 
-use Combat\Enemy;
+use Character\Enemy;
 
 final class Room
 {
-    private ?Enemy $enemy;
-
-    public function __construct(bool $hasEnemy)
-    {
-        $this->enemy = $hasEnemy ? new Enemy() : null;
-    }
-
-    public function hasEnemy(): bool
-    {
-        return $this->enemy !== null;
-    }
+    public function __construct(
+        private Enemy $enemy
+    ) {}
 
     public function getEnemy(): Enemy
     {
