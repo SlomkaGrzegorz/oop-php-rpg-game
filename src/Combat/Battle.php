@@ -2,7 +2,8 @@
 
 namespace Combat;
 
-use Player\Player;
+use Character\Player;
+use Character\Enemy;
 use Input\InputHandlerInterface;
 
 final class Battle
@@ -13,22 +14,16 @@ final class Battle
 
     public function fight(Player $player, Enemy $enemy): void
     {
-        echo "Rozpoczyna się walka!\n";
+        echo $enemy->isBoss() ? "BOSS!\n" : "Wróg!\n";
 
         while ($player->isAlive() && $enemy->isAlive()) {
-            $action = $this->input->getPlayerAction();
+            $action = $this->input->chooseAction();
 
-            if ($action === 1) {
-                $enemy->takeDamage($player->attack());
-            }
+            $action->execute($player, $enemy);
 
             if ($enemy->isAlive()) {
                 $player->takeDamage($enemy->attack());
             }
         }
-
-        echo $player->isAlive()
-            ? "Wróg pokonany!\n"
-            : "Gracz zginął...\n";
     }
 }
