@@ -13,13 +13,22 @@ final class Battle
 
     public function fight(Player $player, Enemy $enemy): void
     {
+        echo "Rozpoczyna się walka!\n";
+
         while ($player->isAlive() && $enemy->isAlive()) {
             $action = $this->input->getPlayerAction();
-            $enemy->takeDamage($player->attack());
+
+            if ($action === 1) {
+                $enemy->takeDamage($player->attack());
+            }
 
             if ($enemy->isAlive()) {
                 $player->takeDamage($enemy->attack());
             }
         }
+
+        echo $player->isAlive()
+            ? "Wróg pokonany!\n"
+            : "Gracz zginął...\n";
     }
 }
