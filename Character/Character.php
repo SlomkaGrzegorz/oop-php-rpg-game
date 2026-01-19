@@ -1,5 +1,5 @@
 <?php
-class Character{
+abstract class Character{
     protected string $Name;
     protected int $MaxHP;
     protected int $CurrentHP;
