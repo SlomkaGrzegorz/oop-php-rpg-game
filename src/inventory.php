@@ -54,7 +54,6 @@ class Inventory {
         }
 
         elseif ($item instanceof weapons) {
-            echo "Machasz bronią " . $item->getName() . ", ale system walki jeszcze nie gotowy!\n";
             $player->equipment->equipWeapon($item);
 
         }
