@@ -46,7 +46,7 @@ class Equipment {
 
     public function getDamageValue(): int {
 
-        if(this->weaponSlot === null) {
+        if($this->weaponSlot === null) {
             return 1;
         }
 
