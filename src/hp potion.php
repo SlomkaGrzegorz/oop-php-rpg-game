@@ -1,7 +1,7 @@
 <?php
 class hpPotion extends consumable{
     protected string $name = "Mikstura zdrowia";
-    protected string $description = "Mikstura odnawiająca od 2 do 5 zdrowia";
+    protected string $description = "Mikstura odnawiająca";
     protected int $usageNumber = 1;
     protected int $healAmount;
 
