@@ -1,18 +1,11 @@
 <?php
-require_once 'items.php';
-require_once 'consumable.php';
-require_once 'hp potion.php';
-require_once 'weapons.php';
-require_once 'wooden sword.php';
-require_once 'armours.php';
-require_once 'leatherChestplate.php';
-require_once 'equipment.php';
-require_once 'inventory.php';
-require_once 'legendary sword.php';
-require_once 'ironChestplate.php';
+spl_autoload_register(function ($class_name) {
+    $file = __DIR__ . '/' . $class_name . '.php';
 
-
-
+    if (file_exists($file)) {
+        require_once $file;
+    }
+});
 
 class Player {
     public int $hp = 50;

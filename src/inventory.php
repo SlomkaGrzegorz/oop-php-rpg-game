@@ -54,7 +54,14 @@ class Inventory {
         }
 
         elseif ($item instanceof weapons) {
-            $player->equipment->equipWeapon($item);
+            $oldItem = $player->equipment->equipWeapon($item);
+
+            $this->remove($index);
+
+            if ($oldItem !== null) {
+                echo "Do plecaka wraca: " . $oldItem->getName() . "\n";
+                $this->add($oldItem);
+            }
 
         }
         else {
