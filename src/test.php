@@ -8,6 +8,10 @@ require_once 'armours.php';
 require_once 'leatherChestplate.php';
 require_once 'equipment.php';
 require_once 'inventory.php';
+require_once 'legendary sword.php';
+require_once 'ironChestplate.php';
+
+
 
 
 class Player {
