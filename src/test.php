@@ -9,6 +9,7 @@ require_once 'leatherChestplate.php';
 require_once 'equipment.php';
 require_once 'inventory.php';
 
+
 class Player {
     public int $hp = 50;
     public Equipment $equipment;
@@ -26,6 +27,9 @@ $inventory = new Inventory();
 $inventory->add(new hpPotion());
 $inventory->add(new leatherChestplate());
 $inventory->add(new woodenSword());
+$inventory->add(new legendarySword());
+$inventory->add(new ironChestplate());
+$inventory->add(new leatherPants());
 
 while (true) {
     echo "\n============================================\n";
