@@ -45,7 +45,7 @@ class DungeonGenerator
             if (rand(0, 1) === 1) {
                 $rooms[$i]->setEnemy($this->enemyFactory->createEnemy());
             } elseif (rand(0, 1) === 1) {
-                $rooms[$i]->setItem($this->itemFactory->createConsumable());
+                $rooms[$i]->setItem($this->itemFactory->createItem());
             }
         }
 
