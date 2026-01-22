@@ -3,12 +3,12 @@ namespace Items\Armors;
 
 use Items\Armor;
 
-class IronChestplate extends Armor
+class IronPants extends Armor
 {
 
     public function __construct()
     {
-        parent::__construct("Żelazny napierśnik", 5, "body");
+        parent::__construct("Żelazne nogawice", 5, "legs");
     }
 
 }
