@@ -68,7 +68,7 @@ class Game
                     $this->combatRenderer->render($result);
 
                     if ($currentRoom->isBossRoom() && !$enemy->isAlive()) {
-                        $this->input->info("\n🎉 Gratulacje! Pokonałeś Bossa i ukończyłeś grę! 🎉");
+                        $this->input->info("\n Gratulacje! Pokonałeś Bossa i ukończyłeś grę! ");
                         break;
                     }
 
