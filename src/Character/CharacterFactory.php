@@ -11,7 +11,8 @@ class CharacterFactory implements CharacterFactoryInterface
     {
         $this->characters = [
             new Human(),
-            //new Elf(),
+            new Elf(),
+            new Orc(),
         ];
     }
 
