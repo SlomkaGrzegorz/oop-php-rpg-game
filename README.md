@@ -23,12 +23,12 @@ Composer
 ## Launching the application
 
 ### 1. Cloning the repository
-git clone https://github.com/SlomkaGrzegorz/oop-php-rpg-game.git
-cd oop-php-rpg-game
-composer dump-autoload (if you don't have a composer you need to install it)
+git clone https://github.com/SlomkaGrzegorz/oop-php-rpg-game.git<br>
+cd oop-php-rpg-game<br>
+composer dump-autoload (if you don't have a composer you need to install it)<br>
 php bin/game.php
 
 ## Authors
-Grzegorz Słomka
-Michał Olszowy
+Grzegorz Słomka<br>
+Michał Olszowy<br>
 Jakub Szpotowicz
